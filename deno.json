@@ -1,0 +1,30 @@
+{
+    "imports": {
+        "@std/cli": "jsr:@std/cli@^1.0.0",
+        "ink": "npm:ink@^4.4.1",
+        "react": "npm:react@^18.3.1",
+        "react/jsx-runtime": "npm:react@^18.3.1/jsx-runtime",
+        "react/jsx-dev-runtime": "npm:react@^18.3.1/jsx-dev-runtime",
+        "react-dom": "npm:react-dom@^18.3.1",
+        "openai": "npm:openai@^4.58.1",
+        "@anthropic-ai/sdk": "npm:@anthropic-ai/sdk@^0.27.3"
+    },
+    "compilerOptions": {
+        "lib": ["deno.ns", "deno.window"],
+        "strict": true,
+        "jsx": "react-jsx",
+        "jsxImportSource": "react",
+        "types": ["npm:@types/react@^18.3.12"]
+    },
+    "tasks": {
+        "dev": "deno run --allow-net --allow-env --allow-read src/main.tsx",
+        "start": "deno run --allow-net --allow-env --allow-read src/main.tsx"
+    },
+    "fmt": {
+        "useTabs": false,
+        "lineWidth": 100,
+        "indentWidth": 4,
+        "semiColons": true,
+        "singleQuote": true
+    }
+}
