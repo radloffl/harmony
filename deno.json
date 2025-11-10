@@ -19,7 +19,14 @@
     },
     "tasks": {
         "dev": "deno run --allow-net --allow-env --allow-read src/main.tsx",
-        "start": "deno run --allow-net --allow-env --allow-read src/main.tsx"
+        "start": "deno run --allow-net --allow-env --allow-read src/main.tsx",
+        "release": "deno compile --allow-net --allow-env --allow-read --output harmony src/main.tsx",
+        "release:macos": "deno compile --allow-net --allow-env --allow-read --target aarch64-apple-darwin --output .build/macos-arm64/harmony src/main.tsx",
+        "release:macos-x86": "deno compile --allow-net --allow-env --allow-read --target x86_64-apple-darwin --output .build/macos-x64/harmony src/main.tsx",
+        "release:linux": "deno compile --allow-net --allow-env --allow-read --target x86_64-unknown-linux-gnu --output .build/linux-x64/harmony src/main.tsx",
+        "release:linux-arm": "deno compile --allow-net --allow-env --allow-read --target aarch64-unknown-linux-gnu --output .build/linux-arm64/harmony src/main.tsx",
+        "release:windows": "deno compile --allow-net --allow-env --allow-read --target x86_64-pc-windows-msvc --output .build/windows-x64/harmony src/main.tsx",
+        "release:all": "deno task release:macos && deno task release:macos-x86 && deno task release:linux && deno task release:linux-arm && deno task release:windows"
     },
     "fmt": {
         "useTabs": false,
