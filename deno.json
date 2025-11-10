@@ -1,6 +1,7 @@
 {
     "imports": {
         "@std/cli": "jsr:@std/cli@^1.0.0",
+        "@cliffy/command": "jsr:@cliffy/command@^1.0.0-rc.7",
         "ink": "npm:ink@^4.4.1",
         "react": "npm:react@^18.3.1",
         "react/jsx-runtime": "npm:react@^18.3.1/jsx-runtime",

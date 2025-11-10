@@ -11,6 +11,7 @@ React-like components via Ink.
 - 💬 **Chat & Completion** - Support for both chat and text completion modes
 - 🎯 **Type-Safe** - Built with TypeScript for Deno
 - ✨ **Helpful Error Messages** - Beautiful error UI with contextual help and quick fixes
+- 📚 **Auto-Generated Help** - Built with Cliffy for automatic help text and documentation
 
 ## Installation
 
@@ -71,9 +72,10 @@ deno task dev chat --prompt "Explain quantum computing"
 ```
 harmony/
 ├── src/
-│   ├── main.tsx             # Entry point
+│   ├── main.tsx             # Entry point with Cliffy CLI setup
 │   ├── commands/
-│   │   └── index.tsx        # Command handlers with Ink UI
+│   │   ├── chat.tsx         # Chat command definition
+│   │   └── complete.tsx     # Completion command definition
 │   ├── api/
 │   │   ├── chatgpt.ts       # ChatGPT API implementation
 │   │   └── claude.ts        # Claude API implementation
@@ -99,6 +101,7 @@ The project uses a provider pattern to support multiple AI APIs:
 - **AIProvider Interface** - Common interface for all AI providers
 - **ChatGPT & Claude Implementations** - Specific implementations for each provider
 - **Provider Factory** - Automatically selects and creates the appropriate provider
+- **Cliffy CLI Framework** - Type-safe command-line parsing with auto-generated help
 - **Ink UI Components** - React-like components for beautiful CLI output
 - **Centralized Theme** - Consistent colors, spacing, and styles across all UI components
 
